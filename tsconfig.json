@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "target": "esnext",
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "build",
+    "types": [
+      "node"
+    ],
+  }
+}

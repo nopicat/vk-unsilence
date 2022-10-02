@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  bot:
+    build: 
+      context: .
+      target: development
+    command: npm run start:dev
+    env_file: .env
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/build
+      - audio:/usr/src/app/audio
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+
+volumes:
+  audio:
+  redis_data:
